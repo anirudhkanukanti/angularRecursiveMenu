@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  .list-item {
+    margin: 0;
+    background-color: rgba(211, 211, 211, 0.6);
+    list-style: none;
+    padding: 10px;
+    border: 1px solid;
+    border-bottom: none;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    .clild-list {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      transform: translateX(100%);
+      display: block;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid;
+    }
+    &:hover {
+      background-color: rgba(211, 211, 211, 1);
+      .clild-list {
+        display: block;
+      }
+    }
+  }
+}
