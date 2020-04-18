@@ -1,12 +1,12 @@
-<li class="list">
+<ul class="list">
     <ng-container *ngFor="let item of data">
-        <ul *ngIf="item.child?.length" class="list-item" (mouseenter)="item.showChild = true"
+        <li *ngIf="item.child?.length" class="list-item" (mouseenter)="item.showChild = true"
             (mouseleave)="item.showChild = false">
             {{item.title}}
             <app-recursive-menu *ngIf="item.showChild" class="clild-list" [data]="item.child"></app-recursive-menu>
-        </ul>
-        <ul *ngIf="!item.child?.length" class="list-item">
+        </li>
+        <li *ngIf="!item.child?.length" class="list-item">
             {{item.title}}
-        </ul>
+        </li>
     </ng-container>
-</li>
+</ul>

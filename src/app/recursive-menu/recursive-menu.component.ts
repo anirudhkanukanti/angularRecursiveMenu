@@ -9,6 +9,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class RecursiveMenuComponent implements OnInit {
 
   @Input() data;
+  showChild = false;
 
   constructor() { }
 
